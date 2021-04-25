@@ -7,10 +7,11 @@ public class Dogs {
 	
 	private PApplet app;
 	
-	private String id, name, breed, birth;
+	private String  name, breed, birth;
+	private int id;
 	
 	
-	public Dogs(PApplet app, String id, String name, String breed, String birth) {
+	public Dogs(PApplet app, int id, String name, String breed, String birth) {
 
 	this.app=app;
 		
@@ -22,12 +23,9 @@ public class Dogs {
 
 	}
 	
-	public void drawInfo(int x, int y) {
+	public void drawDogs(int x, int y) {
 
-		app.text("Id:" + id, x, y);
-		app.text("Name:" + name, x, y + 20);
-		app.text("Breed:" + breed, x, y + 40);
-		app.text("birth:" + birth, x, y + 60);
+	
 
 	}
 	
