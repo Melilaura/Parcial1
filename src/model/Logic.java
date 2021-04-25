@@ -4,7 +4,6 @@ import java.util.ArrayList;
 import java.util.Collections;
 
 import processing.core.PApplet;
-import processing.core.PImage;
 
 public class Logic {
 
@@ -29,11 +28,12 @@ public class Logic {
 	DogBreed Breed;
 	DogBirthday Birth;
 
-	private String[] savedId;
+	private String[] savedId;   
 	private String[] savedName;
 	private String[] savedBreed;
 	private String[] savedBirth;
 
+	
 	// list
 	private ArrayList<Dogs> dog;
 
@@ -99,22 +99,22 @@ public class Logic {
 
 			for (int i = 0; i < dog.size(); i++) {
 
-				String id = Integer.toString(dog.get(i).getId());
+				id = dog.get(i).getId();
 
-				String name = dog.get(i).getName().toLowerCase();
+				name = dog.get(i).getName().toLowerCase();
 
-				String breed = dog.get(i).getBreed().toLowerCase();
+				breed = dog.get(i).getBreed().toLowerCase();
 
-				String birth = dog.get(i).getBirth();
+				birth = dog.get(i).getBirth();
 
-				String newLine = id + " " + name + " " + breed + " " + birth;
-				savedId[i] = newLine;
-
-				app.saveStrings("./SavedId.txt", savedId);
-
-				System.out.println("saved");
+				String IdLine = id + " " + name + " " + breed + " " + birth;
+				savedId[i] = IdLine;
 
 			}
+
+			System.out.println("se guardo ID");
+			app.saveStrings("./data/exports/SavedId.txt", savedId);
+
 		}
 
 		if (mouseX > 102 && mouseX < 229 && mouseY > 35 && mouseY < 369) {
@@ -131,11 +131,14 @@ public class Logic {
 
 				birth = dog.get(i).getBirth();
 
-				String newline = id + " " + name + " " + breed + " " + birth;
-				savedName[i] = newline;
-				app.saveStrings("./SavedName.txt", savedName);
+				String Nameline = id + " " + name + " " + breed + " " + birth;
+				savedName[i] = Nameline;
 
 			}
+
+			System.out.println("se guardo por nombre");
+			app.saveStrings("./data/exports/SavedName.txt", savedName);
+
 		}
 
 		if (mouseX > 229 && mouseX < 372 && mouseY > 35 && mouseY < 369) {
@@ -152,10 +155,13 @@ public class Logic {
 
 				birth = dog.get(i).getBirth();
 
-				String newline = id + " " + name + " " + breed + " " + birth;
-				savedBreed[i] = newline;
-				app.saveStrings("./SavedBreed.txt", savedBreed);
+				String Breedline = id + " " + name + " " + breed + " " + birth;
+				savedBreed[i] = Breedline;
+
 			}
+
+			System.out.println("se guardo por raza");
+			app.saveStrings("/data/exports/SavedBreed.txt", savedBreed);
 		}
 
 		if (mouseX > 372 && mouseX < 475 && mouseY > 35 && mouseY < 369) {
@@ -172,10 +178,13 @@ public class Logic {
 
 				birth = dog.get(i).getBirth();
 
-				String newline = id + " " + name + " " + breed + " " + birth;
-				savedBirth[i] = newline;
-				app.saveStrings("./SavedBirth.txt", savedBirth);
+				String Birthline = id + " " + name + " " + breed + " " + birth;
+				savedBirth[i] = Birthline;
+
 			}
+
+			System.out.println("se guardo por cumpleaños");
+			app.saveStrings("./data/exports/SavedBirth.txt", savedBirth);
 
 		}
 
@@ -187,38 +196,6 @@ public class Logic {
 
 	public void setDog(ArrayList<Dogs> dog) {
 		this.dog = dog;
-	}
-
-	public String[] getSavedName() {
-		return savedName;
-	}
-
-	public String[] getSavedBreed() {
-		return savedBreed;
-	}
-
-	public String[] getSavedBirth() {
-		return savedBirth;
-	}
-
-	public String[] getSavedId() {
-		return savedId;
-	}
-
-	public void setSavedBreed(String[] savedBreed) {
-		this.savedBreed = savedBreed;
-	}
-
-	public void setSavedName(String[] savedName) {
-		this.savedName = savedName;
-	}
-
-	public void setSavedBirth(String[] savedBirth) {
-		this.savedBirth = savedBirth;
-	}
-
-	public void setSavedId(String[] savedId) {
-		this.savedId = savedId;
 	}
 
 }

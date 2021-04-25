@@ -15,12 +15,10 @@ public class Dogs implements Comparable<Dogs> {
 	public Dogs(PApplet app, int id, String name, String breed, String birth) {
 
 		this.app = app;
-
 		this.id = id;
 		this.name = name;
 		this.breed = breed;
 		this.birth = birth;
-
 
 	}
 
@@ -48,6 +46,22 @@ public class Dogs implements Comparable<Dogs> {
 
 	public int getId() {
 		return id;
+	}
+	
+	public void setBirth(String birth) {
+		this.birth = birth;
+	}
+	
+	public void setBreed(String breed) {
+		this.breed = breed;
+	}
+	
+	public void setId(int id) {
+		this.id = id;
+	}
+	
+	public void setName(String name) {
+		this.name = name;
 	}
 
 	public int compareTo(Dogs nextDog) {
