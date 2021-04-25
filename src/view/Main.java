@@ -43,7 +43,7 @@ public class Main extends PApplet {
 
 			textSize(15);
 			
-			//System.out.println(controller.getDog().get(i).getName());
+			
 			controller.getDog().get(i).drawDogs(60,(60*i)+100); 
 			
 		}
