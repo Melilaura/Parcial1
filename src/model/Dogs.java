@@ -1,7 +1,6 @@
 package model;
 
 import processing.core.PApplet;
-import processing.core.PImage;
 
 public class Dogs implements Comparable<Dogs> {
 
@@ -65,7 +64,7 @@ public class Dogs implements Comparable<Dogs> {
 	}
 
 	public int compareTo(Dogs nextDog) {
-		// TODO Auto-generated method stub
+	
 		return this.id - nextDog.getId();
 	}
 

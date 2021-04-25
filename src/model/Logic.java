@@ -28,12 +28,11 @@ public class Logic {
 	DogBreed Breed;
 	DogBirthday Birth;
 
-	private String[] savedId;   
+	private String[] savedId;
 	private String[] savedName;
 	private String[] savedBreed;
 	private String[] savedBirth;
 
-	
 	// list
 	private ArrayList<Dogs> dog;
 
@@ -62,21 +61,17 @@ public class Logic {
 		for (int i = 0; i < txt1.length; i++) {
 
 			dogType = PApplet.split(txt1[i], " ");
-
 			id = Integer.parseInt(dogType[0]);
-
 			name = dogType[1];
 
 			for (int j = 0; j < txt2.length; j++) {
 
 				dogType2 = PApplet.split(txt2[j], " ");
-
 				id2 = Integer.parseInt(dogType2[0]);
 
 				if (id == id2) {
 
 					breed = dogType2[1];
-
 					birth = dogType2[2];
 
 					dog.add(new Dogs(app, id, name, breed, birth));
@@ -100,11 +95,8 @@ public class Logic {
 			for (int i = 0; i < dog.size(); i++) {
 
 				id = dog.get(i).getId();
-
 				name = dog.get(i).getName().toLowerCase();
-
 				breed = dog.get(i).getBreed().toLowerCase();
-
 				birth = dog.get(i).getBirth();
 
 				String IdLine = id + " " + name + " " + breed + " " + birth;
@@ -124,11 +116,8 @@ public class Logic {
 			for (int i = 0; i < dog.size(); i++) {
 
 				id = dog.get(i).getId();
-
 				name = dog.get(i).getName().toLowerCase();
-
 				breed = dog.get(i).getBreed().toLowerCase();
-
 				birth = dog.get(i).getBirth();
 
 				String Nameline = id + " " + name + " " + breed + " " + birth;
@@ -148,11 +137,8 @@ public class Logic {
 			for (int i = 0; i < dog.size(); i++) {
 
 				id = dog.get(i).getId();
-
 				name = dog.get(i).getName().toLowerCase();
-
 				breed = dog.get(i).getBreed().toLowerCase();
-
 				birth = dog.get(i).getBirth();
 
 				String Breedline = id + " " + name + " " + breed + " " + birth;
@@ -171,11 +157,8 @@ public class Logic {
 			for (int i = 0; i < dog.size(); i++) {
 
 				id = dog.get(i).getId();
-
 				name = dog.get(i).getName().toLowerCase();
-
 				breed = dog.get(i).getBreed().toLowerCase();
-
 				birth = dog.get(i).getBirth();
 
 				String Birthline = id + " " + name + " " + breed + " " + birth;
